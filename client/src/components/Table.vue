@@ -3,6 +3,7 @@
         <export-excel
             class='btn_excel'
             :data='tituls'
+            :fields="json_fields"
             name="tituls_info.xls">
             <img src="../assets/down_excel.png" alt="excel_download" class="down_logo">
         </export-excel>
@@ -25,6 +26,27 @@
     import TableFooter from '@/components/TableFooter';
     export default {
         props: ['tituls'],
+        data() {
+            return {
+                json_fields: {
+                'Номер титула': 'id_adr',
+                'Год ввода': 'god_vvod',
+                'Название титула': 'name_titul',
+                'Всего розеток': 'all_socket',
+                'Занято розеток': 'check_socket',
+                'Всего квартир': 'kv_all',
+                'Квартир на PON': 'kv_pon',
+                'Всего ТА': 'ta_all',
+                'ТА на PON': 'ta_pon',
+                'Byfly PON': 'byfly_pon',
+                'ZALA PON': 'zala_pon',
+                'Byfly и ZALA PON': 'byfly_zala_pon',
+                'Пакеты услуг PON': 'packet_pon',
+                'Голая телефония': 'phone_null_pon',
+                'VPN': 'vpn'
+                }
+            }
+        },
         components: {
             TableHeader,
             TableBodyRows,

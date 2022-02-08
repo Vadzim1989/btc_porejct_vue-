@@ -1,7 +1,7 @@
 <template>
     <tr :key="tituls.id_adr">
         <td class="tdNum td-id">{{tituls.id_adr}}</td>
-        <td>{{tituls.zues}}</td>
+        <td><router-link :to="CITY.get(tituls.zues)" class="hot">{{tituls.zues}}</router-link></td>
         <td class="td-name">{{tituls.name_titul}}</td>
         <td class="tdNum tdYear" 
             @click="$parent.$parent.$emit('set-year', tituls.god_vvod)">
@@ -28,7 +28,38 @@ export default {
         tituls: {
             type: Object
         }
-    }
+    },
+    data() {
+        return {
+            CITY: new Map(
+                [
+                    ["ГОМЕЛЬ",           '/gomel'],
+                    ["ВЕТКОВСКИЙ",       '/vetka'],
+                    ["ЧЕЧЕРСКИЙ",        '/chechersk'],
+                    ["ДОБРУШСКИЙ",       '/dobrush'],
+                    ["ЖЛОБИНСКИЙ",       '/jlobin'],
+                    ["КОРМЯНСКИЙ",       '/korma'],
+                    ["РОГАЧЕВСКИЙ",      '/rogachev'],
+                    ["РЕЧИЦКИЙ",         '/rechica'],
+                    ["СВЕТЛОГОРСКИЙ",    '/svetlogorsk'],
+                    ["БРАГИНСКИЙ",       '/bragin'],
+                    ["КАЛИНКОВИЧСКИЙ",   '/kalinkovichi'],
+                    ["ХОЙНИКСКИЙ",       '/hoiniki'],
+                    ["ЛОЕВСКИЙ",         '/loev'],
+                    ["ПЕТРИКОВСКИЙ",     '/petrikov'],
+                    ["МОЗЫРСКИЙ",        '/mozir'],
+                    ["ЖИТКОВИЧСКИЙ",     '/jitkovichi'],
+                    ["ЕЛЬСКИЙ",          '/elsk'],
+                    ["НАРОВЛЯНСКИЙ",     '/narovlya'],
+                    ["ЛЕЛЬЧИЦКИЙ",       '/lelchici'],
+                    ["ОКТЯБРЬСКИЙ",      '/october'],
+                    ["ГОМЕЛЬСКИЙ",       '/gomelzues'],
+                    ["БУДА-КОШЕЛЕВСКИ",  '/buda']
+                ]
+            )
+        }
+    },
+
 }
 </script>
 
@@ -40,5 +71,13 @@ export default {
         cursor: pointer;
         background-color: #00eeff;
         font-weight: bold;
+    }
+    .hot:hover {
+        cursor: pointer;
+        background-color: #00eeff;
+    }
+    .hot {
+        text-decoration: none;
+        color: black;
     }
 </style>

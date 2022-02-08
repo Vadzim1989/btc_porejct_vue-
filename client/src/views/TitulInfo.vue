@@ -22,7 +22,7 @@
                 loading: true,
                 filterName: '',
                 filterYear: null
-            }
+            }                
         },
         computed: { 
             filteredTituls() {
