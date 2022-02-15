@@ -14,6 +14,10 @@ export default new Router ({
         {
             path: '/',
             component: () => import('./views/HomePage')
+        },
+        {
+            path: '/more/moreinfo',
+            component: () => import('./views/MoreInfo')
         }
     ]
 })

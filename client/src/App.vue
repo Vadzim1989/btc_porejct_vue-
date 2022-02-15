@@ -4,7 +4,7 @@
       <span class="tooltiptext">Вадим Денисовский, инженер-программист ИВЦ</span>
     </div>
     <div class="header">
-      <h1>Информация по объектам титульного строительства. XPON</h1>
+      <h1>Автоматизированный процесс сбора данных по обектам титульного сроительства. PON</h1>
     </div>
     <div class="main">
       <Navigation/>
@@ -75,7 +75,7 @@ body{
 }
 .header{
   text-align: center;
-  font-size: 1rem;
+  font-size: .7rem;
 }
 
 .tooltip {

@@ -1,8 +1,9 @@
 <template>
-    <div class="nav_wrapper">
-        <img src="../assets/logo_btk.png" alt="logo_btk">
+    <div class="nav_wrapper">          
+        <router-link to="/"><img src="../assets/logo_btk.png" alt="logo_btk" id="logo_btk"></router-link>
         <ul class='nav'>
             <li v-for="(name, link, index) in $parent.cities" :key="index"><router-link :to="'/'+link">{{name}}</router-link></li>
+            <li class="main_menu"><router-link to="/more/moreinfo">Информация по абонентам</router-link></li>
         </ul>
     </div>
 </template>
@@ -46,6 +47,9 @@
         background: #2f9ed1;
         font-weight: 500;
         border-left: 5px solid #88d359;
+    }
+    .main_menu a {
+        background-color: #e6e59a;
     }
     @media screen and (max-width:1850px){
         li {

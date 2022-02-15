@@ -2,7 +2,10 @@
     <div class="not_page_wrapper">        
         <div class="not_page">
             <h1>Добро пожаловать!</h1>
-            <router-link to='/all'>Начать работу</router-link>
+            <p class="info">Информация по объектам титульного строительства</p>
+            <router-link to='/all' class="main_btn">Начать работу</router-link>
+            <p class="info">Информация по абонентам объектов титульного строительства</p>
+            <router-link to='/more/moreinfo' class="main_btn">Начать работу</router-link>
         </div>
     </div>
 </template>
@@ -30,6 +33,16 @@
     }
     .not_page a:hover {
         background-color: #94fd94;
+        color: black;
+    }
+    .info {
+        font-size: 1.2rem;
+        background: -webkit-linear-gradient(#333333, #239428);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .main_btn {
+        border-radius: 25px;
         color: black;
     }
     @media screen and (max-width:1840px) {

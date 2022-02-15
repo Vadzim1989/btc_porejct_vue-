@@ -5,7 +5,7 @@
             :data='tituls'
             :fields="json_fields"
             name="tituls_info.xls">
-            <img src="../assets/down_excel.png" alt="excel_download" class="down_logo">
+            <img src="../../assets/down_excel.png" alt="excel_download" class="down_logo">
         </export-excel>
         <table>
             <TableHeader ref="thead"/>
@@ -21,9 +21,9 @@
 </template>
 
 <script>
-    import TableHeader from '@/components/TableHeader';
-    import TableBodyRows from '@/components/TableBodyRows';
-    import TableFooter from '@/components/TableFooter';
+    import TableHeader from '@/components/titulinfo/TableHeader';
+    import TableBodyRows from '@/components/titulinfo/TableBodyRows';
+    import TableFooter from '@/components/titulinfo/TableFooter';
     export default {
         props: ['tituls'],
         data() {

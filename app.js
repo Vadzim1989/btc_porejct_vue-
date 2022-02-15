@@ -30,6 +30,7 @@ app.use('/api/titulinfo', require('./routers/getRechicaTituls')); // rechica
 app.use('/api/titulinfo', require('./routers/getRogachevTituls')); // rogachev
 app.use('/api/titulinfo', require('./routers/getSvetlogorskTitul')); // svetlogorsk
 app.use('/api/titulinfo', require('./routers/getVetkaTituls')); // vetka
+app.use('/api/titulinfo', require('./routers/getMoreInfo')); // more_info
 
 
 

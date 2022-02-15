@@ -7,7 +7,7 @@
 </template>
 
 <script>
-    import Table from '@/components/Table';
+    import Table from '@/components/titulinfo/Table';
     import Loader from '@/components/Loader';
 
     export default {
