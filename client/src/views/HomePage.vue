@@ -2,10 +2,8 @@
     <div class="not_page_wrapper">        
         <div class="not_page">
             <h1>Добро пожаловать!</h1>
-            <p class="info">Информация по объектам титульного строительства</p>
-            <router-link to='/all' class="main_btn">Начать работу</router-link>
-            <p class="info">Информация по абонентам объектов титульного строительства</p>
-            <router-link to='/more/moreinfo' class="main_btn">Начать работу</router-link>
+            <router-link to='/all' class="main_btn">Информация по объектам титульного строительства</router-link>
+            <router-link to='/more/moreinfo' class="main_btn">Информация по абонентам объектов титульного строительства</router-link>
         </div>
     </div>
 </template>
@@ -25,11 +23,11 @@
     .not_page {
         text-align: center;
         position: relative;
+        display: flex;
+        flex-flow: column nowrap;
     }
-    .not_page a {
-        text-decoration: none;
-        border: 2px solid black;
-        padding: 2%;
+    .main_btn {
+        margin: 1% auto;
     }
     .not_page a:hover {
         background-color: #94fd94;

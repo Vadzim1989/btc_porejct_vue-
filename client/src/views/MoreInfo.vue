@@ -6,7 +6,8 @@
                 v-afocus
                 v-mfocus
                 @keydown.esc="filterID=''"
-                @keydown.enter="keyDownEnter"/>
+                @keydown.enter="keyDownEnter"
+                required=''/>
         <button type="sumbit" 
                 @click="fetchData">Поиск</button>
         <Loader v-if="loading"/>  
@@ -37,18 +38,22 @@
         },
         methods: {
             fetchData() {
-                this.loading = true;
-                fetch(`http://10.245.3.132:99/api/titulinfo/moreinfo?titulid=${this.filterID}`)
-                .then(response => response.json())
-                .then(json => {
-                        setTimeout(() => {
-                            this.users = json
-                            this.loading = false
-                    },100);
-                })
+                if(this.filterID) {   
+                    this.loading = true;
+                    fetch(`http://10.245.3.132:99/api/titulinfo/moreinfo?titulid=${this.filterID}`)
+                    .then(response => response.json())
+                    .then(json => {
+                            setTimeout(() => {
+                                this.users = json
+                                this.loading = false
+                        },100);
+                    })
+                } else {
+                    this.users = [];
+                }
             },
             keyDownEnter(){
-                this.fetchData();
+                this.fetchData();              
             },
             en2ru: str => {  //qwerty => йцукенг encoding en to rus
                 if(!str) return str;
