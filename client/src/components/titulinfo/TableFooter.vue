@@ -2,6 +2,7 @@
     <tfoot>
         <tr>
             <td colspan="4">Всего: {{tituls.map(({id_adr}) => id_adr).length}} титулов</td>
+            <td class="tdNum">{{arraySum(tituls.map(({house}) => house))}}</td>
             <td class="tdNum">{{arraySum(tituls.map(({all_socket}) => all_socket))}}</td>
             <td class="tdNum">{{arraySum(tituls.map(({check_socket}) => check_socket))}}</td>
             <td class="tdNum">{{arraySum(tituls.map(({kv_all}) => kv_all))}}</td>
@@ -14,6 +15,8 @@
             <td class="tdNum">{{arraySum(tituls.map(({packet_pon}) => packet_pon))}}</td>
             <td class="tdNum">{{arraySum(tituls.map(({phone_null_pon}) => phone_null_pon))}}</td>
             <td class="tdNum">{{arraySum(tituls.map(({vpn}) => vpn))}}</td>
+            <td class="tdNum">{{arraySum(tituls.map(({summa}) => summa)).toFixed(2).toString().replace('.',',')}}</td>
+            <td class="tdNum">{{arraySum(tituls.map(({summa_month}) => summa_month)).toFixed(2).toString().replace('.',',')}}</td>
         </tr>
     </tfoot>
 </template>

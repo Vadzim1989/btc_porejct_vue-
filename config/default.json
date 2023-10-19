@@ -1,5 +1,7 @@
 {
     "port": 99,
-    "informixURL": "DSN=gmainids2;CLIENT_LOCALE=ru_RU.57372",
-    "tableName": "titul_info_2"
+    "informixURL": "DSN=gmainids;CLIENT_LOCALE=ru_RU.57372",
+    "tableName": "titul_info_2",
+    "tableNachAll": "titul_info_1",
+    "tableNachMonth": "titul_nach_month"
 }

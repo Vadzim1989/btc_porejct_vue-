@@ -7,6 +7,7 @@
             @click="$parent.$parent.$emit('set-year', tituls.god_vvod)">
                 {{tituls.god_vvod}}
         </td>
+        <td class="tdNum">{{tituls.house}}</td>
         <td class="tdNum">{{tituls.all_socket}}</td>
         <td class="tdNum">{{tituls.check_socket}}</td>
         <td class="tdNum">{{tituls.kv_all}}</td>
@@ -19,6 +20,8 @@
         <td class="tdNum">{{tituls.packet_pon}}</td>
         <td class="tdNum">{{tituls.phone_null_pon}}</td>
         <td class="tdNum">{{tituls.vpn}}</td>
+        <td class="tdNum tdNach tdNachFirst">{{tituls.summa}}</td>
+        <td class="tdNum tdNach">{{tituls.summa_month}}</td>
     </tr>
 </template>
 

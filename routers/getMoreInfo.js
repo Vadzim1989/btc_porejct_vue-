@@ -15,7 +15,6 @@ async function querySelect(req, res) {
                                        wastup:adr_house_service c
                                 where  a.current_ph not in (6,60)
                                 and    a.id_address = b.id_address
-                                and    a.phone not in (select phone from ratsg:prev_date where codop in (57,58))
                                 and    b.house_code = c.id_house
                                 and    c.spr_isfull = ${req.query.titulid}`);
         const result = await statement.execute();

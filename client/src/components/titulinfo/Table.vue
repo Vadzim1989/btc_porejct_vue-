@@ -4,7 +4,8 @@
             class='btn_excel'
             :data='tituls'
             :fields="json_fields"
-            name="tituls_info.xls">
+            :name='`tituls_info ${date}.xls`'
+            worksheet='Титулы'>
             <img src="../../assets/down_excel.png" alt="excel_download" class="down_logo">
         </export-excel>
         <table>
@@ -32,19 +33,23 @@
                 'Номер титула': 'id_adr',
                 'Год ввода': 'god_vvod',
                 'Название титула': 'name_titul',
-                'Всего розеток': 'all_socket',
-                'Занято розеток': 'check_socket',
-                'Всего квартир': 'kv_all',
+                'Кол-во домов': 'house',
+                'Кол-во розеток': 'all_socket',
+                'Занято розеток': 'check_socket',                  
+                'Кол-во квартир': 'kv_all',
                 'Квартир на PON': 'kv_pon',
-                'Всего ТА': 'ta_all',
+                'Кол-во ТА': 'ta_all',
                 'ТА на PON': 'ta_pon',
                 'Byfly PON': 'byfly_pon',
                 'ZALA PON': 'zala_pon',
                 'Byfly и ZALA PON': 'byfly_zala_pon',
                 'Пакеты услуг PON': 'packet_pon',
                 'Голая телефония': 'phone_null_pon',
-                'VPN': 'vpn'
-                }
+                'VPN': 'vpn',
+                'Начисления (с начала года)': 'summa',
+                'Начисления за месяц': 'summa_month'
+                },
+                date: new Date().toLocaleDateString()
             }
         },
         components: {
@@ -93,7 +98,7 @@
     table tfoot {
         position: sticky;
         position: -webkit-sticky;
-        bottom: 0;
+        bottom: 0px;
     }
     table tfoot tr{
         font-weight: 500;
@@ -110,6 +115,12 @@
     .tdNum {
         text-align: center;
         font-size: .8rem;
+    }
+    .tdNachFirst{     
+        border-left: 1px solid black;
+    } 
+    .tdNach {
+        font-weight: 500;
     }
     .table_wrapper {
         flex: 1 1 87%;
